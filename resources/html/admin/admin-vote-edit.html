@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8' name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+	<title> Projet PAPS (Ver. 3.0) </title>
+	<link rel='stylesheet' href='css/basic-style.css' />
+	<link rel='stylesheet' href='css/login-styles.css' />
+	<link rel='stylesheet' href='css/lists-styles.css' />
+
+</head>
+
+<body>
+	<div class='upperbar'> </div>
+	<div class='upperbar toolbar'>
+		<!-- Toolbar for non-authentified users -->
+		<a class='clickable-image' href='/'> </a>
+		<div class='logo-container'>
+			<img src='images/AMU-logo.png' height=45px />
+			<img src='images/ECM-logo.png' height=45px />
+		</div>
+		<h1 class='title'> <strong>P</strong><span class='website-title'>rojet</span> <strong>P</strong><span
+				class='website-title'>APS</span> </h1>
+		<span class="popupOpener" id="parameter-icon" data-name='theme'>&#x2699; </span>
+		<a id='first-button' class='button-framed' href='/user'> Utilisateur </a>
+		<div class='dropdown'> <a class='button-framed' href='#'> &#9662; Administrateur </a>
+			<ul class='menu'>
+				<li> <a class='button' href='/signup'> Inscription </a> </li>
+				<li> <a class='button' href='/login'> Connexion </a> </li>
+			</ul>
+		</div>
+	</div>
+	<div class='upperbar toolbar invisible'>
+		<!-- Toolbar for authentified users -->
+		<a class='clickable-image' href='/'> </a>
+		<div class='logo-container'>
+			<img src='images/AMU-logo.png' height="45px" />
+			<img src='images/ECM-logo.png' height="45px" />
+		</div>
+		<h1 class='title'> <strong>P</strong><span class='website-title'>rojet</span> <strong>P</strong><span
+				class='website-title'>APS</span> </h1>
+		<span class="popupOpener" id="parameter-icon" data-name='theme'>&#x2699; </span>
+		<div id='first-button' class='connected-info'>
+			<a href="/">
+				<div class='profile-picture'> <img src="images/profile-picture-homemade-ver4.png" height="25px"
+						width="25px" /> </div>
+			</a>
+			<div class='user-info'>
+				<p> <strong> ##Username## </strong> </p>
+				<p> ##role## </p>
+			</div>
+		</div>
+		<div id='disconnect-button' class='button-framed' href='/'> Déconnexion </div>
+	</div>
+
+	<div class='contents-container'>
+		<div class='content'>
+			<h2> <strong> Édition de file d'attente</strong> </h2>
+			<hr /> <br />
+			<h2 style="text-decoration-line: underline;text-align:center"> <strong>&diams; PAPS &diams;</strong></h2>
+		</div>
+		<div class='form-container'>
+			<div class='form'>
+				<label for='addSubUsers'>Ajouter des utilisateurs</label>
+				<input id='addSubUsers' name='addSubUsers' type='file' placeholder=' ...' />
+			</div>
+			<div class='form'>
+				<label for='_password'>Mot de passe</label>
+				<input id='_password' name='_password' type='password' placeholder=' ...' />
+			</div>
+			<p class="formError" id="errorPassword" hidden> &diams; Mauvais mot de passe</p>
+			<div class='form'>
+				<button id="submit"> Ajouter</button>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class='footer'>
+		<a class='button' href='/'> Accueil </a>
+		<div class='footer-separator'> | </div>
+		<a class='button' href='/info'> À propos </a>
+		<div class='footer-separator'> | </div>
+		<a class='button' href='/contact'> Nous contacter </a>
+		<div class='footer-separator'> | </div>
+		<a class='button' href='/licence'> Conditions d'utilisation </a>
+		<div class='footer-separator'> | </div>
+		<a class='button' href='/thanks'> Remerciements </a>
+	</div>
+
+
+	<script src='js/popup-manager.js'> </script>
+	<script src='js/other/theme-changer.js'> </script>
+	<script src="js/user/EditVote.js"></script>
+	<script src="js/Utils.js"></script>
+
+</body>
+
+</html>

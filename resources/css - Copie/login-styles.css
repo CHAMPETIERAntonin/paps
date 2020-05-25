@@ -1,0 +1,143 @@
+/* REMOVE NUMBER INPUT ARROWS*/
+	/* Chrome, Safari, Edge, Opera */
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	  -webkit-appearance: none;
+	  margin: 0;
+	}
+
+	/* Firefox */
+	input[type=number] {
+	  -moz-appearance: textfield;
+	}
+
+input[type='text'],
+input[type='number'],
+input[type='password'],
+input[type='email'] {
+  padding: 5px;
+  margin: 5px;
+  background-color : var(--toolbar-background-color);
+  border: 1px solid var(--special-color);
+  border-radius: 3px;
+  color: var(--text-color);
+
+}
+
+input[type='text']:disabled,
+input[type='number']:disabled,
+input[type='password']:disabled,
+input[type='email']:disabled
+{
+	background-color: lightgrey;
+	color:gray;
+}
+
+
+
+
+
+button {
+  background-color: var(--toolbar-background-color);
+  border-radius: 4px;
+  border: 2px solid var(--special-color);
+  color: var(--special-color);
+  cursor: pointer;
+  padding: 5px;
+  margin-top: 10px;
+
+}
+
+button:hover {
+  background-color: var(--special-color);
+  color: #EFEFEF;
+}
+
+
+
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width:100%;
+}
+
+.form-container > button {
+	align-self: center;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	justify-content: flex-start;
+  margin: 5px;
+  width:100%;
+}
+
+.form > label {
+	width: 100%;
+	
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+}
+
+
+.formError {
+	align-self: flex-end;
+	color:red;
+}
+
+.formError:before
+{
+	content: "\2666 ";
+}
+
+.form label {
+  margin-right: auto;
+  margin-left: 5px;
+}
+
+
+div .checkbox {
+  margin : 10px;
+  margin-left: 200px;
+  
+}
+
+#ID {
+	width:150px;
+}
+
+
+@media only screen and (min-width:400px) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+	
+	.form > label {
+		display: inline;
+		width: auto;
+	}
+	
+	.skrinking-message {
+		margin-top: 0;
+	}
+	
+	#ID {
+		width: 225px;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	#ID {
+		width: 400px;
+	}
+}

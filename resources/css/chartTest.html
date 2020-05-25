@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8'
+					name='viewport
+					content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+		<title>CHART</title>
+		<link rel='stylesheet' href='charts-styles.css'/>
+	</head>
+	<body>
+		<div class="pieChart" style="top:100px;left:550px">
+			<div class="pieChartElement" style="--angle:20;--startAngle:0;--color:255,255,255;"></div>
+			<div class="pieChartElement" style="--angle:40;--startAngle:20;--color:170,170,170;"></div>
+			<div class="pieChartElement" style="--angle:190;--startAngle:60;--color:85,85,85;;--more180:1"></div>
+		</div>
+		
+		<div class="chartInfo">57%</div>
+	</body>
+	<script>	
+	var chartElements = document.getElementsByClassName("pieChartElement");
+	var charinfo = document.getElementsByClassName("chartInfo")[0];
+	charinfo.style.top = "121px";
+	charinfo.style.left = "633px";
+	charinfo.style.visibility = "visible";
+	for(var i=0;i<chartElements.length;i++)
+	{
+		chartElements[i].addEventListener("mousemove", function(event)
+		{
+			charinfo.style.left = (event.clientX - 15)+ "px";
+			charinfo.style.top = (event.clientY - 35) + "px";
+
+		});
+	}</script>
+</html>
+	

@@ -1,0 +1,177 @@
+### Title = "Projet PAPS" ###
+### Scripts = "js/Utils.js" "js/admin/ModificationVote.js"  ###
+### Css = "css/input.css" ###
+
+### Content =
+		<div class='content'>
+			<h2> <strong> Édition de file d'attente</strong> </h2>
+			<hr /> <br />
+			<div class="all-options">
+				<div class="option-container">
+					<h3> Paramètres globaux : </h3>
+					<em> Attention ! Passé un certain point, ils pourront ne plus être modifiables </em>
+					<form id="creationForm" action='/createVote' method='post' class='form-container'>
+						<div class='form'>
+							<label for='points'>Nombre de points par personne</label>
+							<input id='points' name='name' type='number' autocomplete="off" placeholder=' 1' min="0" />
+						</div>
+						<p class="formError" id="errorPoints" hidden> Vous devez choisir un nombre supérieur à 0 </p>
+						<div class='form'>
+							<label for='croissant'>Ordre des notes/rang <span class="infoCircle popupOpener" data-title="Notes/Rang" data-content="Choisissez croissant si la personne la plus avantagée a un score plus élevée (note) ou décroissant si elle a un score plus bas (rang)"></span> </label>
+
+							<span for='croissant'>croissant</span>
+							<div class="customRadio">
+								<input id='croissant' name='name' type='radio' name="radio" checked/>
+								<checkmark></checkmark>
+							</div>
+							<span for='decroissant'>décroissant</span>
+							<div class="customRadio">
+								<input id='decroissant' name='name' type='radio' name="radio"/>
+								<checkmark></checkmark>
+							</div>
+
+						</div>
+						<div class='form'>
+							<button> Ajouter</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class='all-options'>
+				<div class='option-container'>
+					<h3> Utilisateurs : </h3> <br />
+					<div class="vertical-list-container" id="userList">
+						<div id="indicator" class="vertical-list-item">
+							<p style="width:19%">NOM</p>
+							<p style="width:19%">Prénom</p>
+							<p style="width:9%">Rang</p>
+							<p style="width:53%">Identifiant</p>
+						</div>
+					</div>
+					<div id="messy-buttons-container" class="centerContainerH">
+						<button id="supprUserList"> Tout supprimer </button>
+						<button id="downloadUserList"> Télécharger </button> <br />
+					</div>
+					<p> ---------------------- </p>
+					<div class="adder-container">
+						<div class="adder">
+							<h4> Ajouter un utilisateur</h4>
+							<form action='' method='get' class='form-container' id="userUniqueForm">
+								<div class="form">
+									<label for='firstName'> Nom </label>
+									<input id='firstName' name='firstName' type='text' autocomplete="off" placeholder="..." size="12" />
+								</div>
+								<div class="form">
+									<label for='lastName'> Prénom </label>
+									<input id='lastName' name='lastName' type='text' autocomplete="off" placeholder="..." size="12" />
+								</div>
+								<div class="form">
+									<label for='mark'> Note/Rang </label>
+									<input id='mark' name='mark' type='number' autocomplete="off" placeholder="1" size="12" />
+								</div>
+								<button> Valider </button>
+							</form>
+						</div>
+						<div class="adder">
+							<h4> Ajouter une liste d'utilisateur <span class="infoCircle popupOpener" data-title="CSV-Utilisateurs"
+									data-content="Vous devez fournir un fichier CSV comportant 3 colonnes : NOM, Prénom, Note/Rang. Vous devez garder les en-têtes"></span>
+							</h4>
+							<form action='' method='get' class='form-container' id="userListForm">
+								<div class="form">
+									<label for='file'> Déposer le fichier .csv</label>
+									<input id='file' name='file' type='file' />
+								</div>
+								<button> Valider </button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='all-options'>
+				<div class='option-container'>
+					<h3> Choix : </h3>
+					<div class="vertical-list-container" id="choiceList" onscroll="event.cancelBubble=true;">
+						<div class="vertical-list-item">
+							<p style="width:15%"> Nom </p>
+							<p style="width:15%;text-align:right"> Places </p>
+							<span style="width:35%"></span>
+						</div>
+					</div>
+					<button id="supprChoiceList"> Tout supprimer </button>
+					<p> ---------------------- </p>
+					<div class="adder-container">
+						<div class="adder">
+							<h4> Ajouter un choix : </h4>
+							<form action='' method='get' class="form-container">
+								<div class="form">
+									<label for='choice-name'> Nom du choix</label>
+									<input id='choiceName' name='choice-name' type='number' autocomplete="off" placeholder="1" size="12" />
+								</div>
+								<button> Valider </button>
+							</form>
+						</div>
+							
+						<div class="adder">
+							<h4> Ajouter une option : </h4>
+							<form action='' method='get' class="form-container" id="choiceUniqueForm">
+								<div class="form">
+									<label for="corresponding-choice"> Dans quel choix ? </label>
+									<select id="corresponding-choice" name ="corresponding-choices">
+										<option  value="example"> Exemple </option>
+										<!-- Script pour rajouter UN élément dans le dropdown, avec name le nom du choix qu'on veut rajouter.
+										<script> 
+											const dropdown = document.querySelector("select");
+											
+											var option = document.createElement("option");
+											option.setAttribute("value", name);
+											option.innerHTML= name;
+											
+											dropdown.appendChild(option);
+										</script>
+										-->
+									</select>
+								</div>
+								<div class="form">
+									<label for='option-name'> Nom de l'option :</label>
+									<input id='optionName' name='option-name' type='text' autocomplete="off" placeholder="..." size="12" />
+								</div>
+								<div class="form">
+									<label for='maxMembers'> Nombre de places :</label>
+									<input id='maxMembers' name='maxMembers' type='number' autocomplete="off" placeholder="1" size="12" />
+								</div>
+								<button> Valider </button>
+							</form>
+
+						</div>
+						<div class="adder">
+							<h4> Ajouter une liste de choix <span class="infoCircle popupOpener" data-title="CSV-Choix"
+									data-content="Vous devez fournir un fichier CSV comportant 2 colonnes : NOM, nombre de places. Vous devez garder les en-têtes"></span>
+							</h4>
+							<form action='' method='get' class="form-container" id="choiceListForm">
+								<div class="form">
+									<label for='file'> Déposer le fichier .csv </label>
+									<input id='file' name='file' type='file' />
+								</div>
+								<button> Valider </button>
+							</form>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="centerContainer">
+				<a class='button-framed' href='/admin/panel'> Retour au menu principal </a>
+			</div>
+		</div>
+		<script>
+			const dropdown = document.querySelector("select");
+			
+			var option = document.createElement("option");
+			option.setAttribute("value", name);
+			option.innerHTML= name;
+			
+			dropdown.appendChild(option);
+		</script>
+	</div>
+###

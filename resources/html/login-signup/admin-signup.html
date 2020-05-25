@@ -1,0 +1,43 @@
+### Title = "Projet PAPS" ###
+### Scripts = "js/Utils.js" "js/AdminSignup.js" ###
+
+### Content =
+		<div class='content'>
+			<h2> <strong> Créer son compte administrateur </strong> </h2>
+			<hr /> <br />
+			<div class="centerContainer">
+				<form id="signupForm" action='/signup' method='post' class='form-container' style="width: 60%;">
+					<div class='form'>
+						<label for='username'>Identifiant</label>
+						<input id='username' name='username' type='text' placeholder=' ...' />
+					</div>
+					<div class='form'>
+						<label for='_password'>Mot de passe</label>
+						<input id='_password' name='_password' type='password' placeholder=' ...' />
+					</div>
+					<p class="formError skrinking-message" id="errorPassword" hidden> Le mot de passe doit faire entre 3 et 15 caractères</p>
+					<div class='form'>
+						<label for='_passwordConfirm'>Confirmer le Mot de passe</label>
+						<input id='_passwordConfirm' name='_passwordConfirm' type='password' placeholder=' ...' />
+					</div>
+					<p class="formError skrinking-message" id="errorPasswordConfirm" hidden> Les mots de passe doivent correspondre</p>
+					<div class='form'>
+						<label for='email'>Adresse mail</label>
+						<input id='email' name='email' type='email' placeholder='xyz@example.xyz' />
+					</div>
+					<p class="formError" id="errorMail" hidden> Cette adresse mail est déjà prise</p>
+					<div class='form'>
+						<label for='licence'>
+							<input id='licence' name='licence' type='checkbox' value='agree' />
+							<span class="skrinking-message"> J'accepte les <a class='button-intext' href='/licence'>Conditions d'utilisation</a> du
+								service. </span>
+						</label>
+					</div>
+					<p class="formError skrinking-message" id="errorCondition" hidden> Vous devez accepter les conditions d'utilisation</p>
+					<div class='form'>
+						<button> S'inscrire</button>
+					</div>
+				</form>
+			</div>
+		</div>
+###

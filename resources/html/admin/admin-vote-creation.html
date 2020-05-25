@@ -1,0 +1,42 @@
+### Title = "Projet PAPS" ###
+### Scripts = "js/Utils.js" "js/admin/CreateVote.js" ###
+### Css = "css/input.css" ###
+
+### Content =
+		<div class='content'>
+			<h2> <strong> Créer une file d'attente : </strong> </h2>
+			<hr /> <br />
+			<div class="centerContainer">
+				<form id="creationForm" action='/createVote' method='post' class='form-container'>
+					<div class='form'>
+						<label for='name'>Nom de la file d'attente</label>
+						<input id='name' name='name' type='text' autocomplete="off" placeholder=' ...' />
+					</div>
+					<p class="formError" id="errorName" hidden> Ce nom est déjà pris</p>
+					<div class='form'>
+						<label for='points'>Nombre de points par personne</label>
+						<input id='points' name='name' type='number' autocomplete="off" placeholder=' 1' min="0" />
+					</div>
+					<p class="formError" id="errorPoints" hidden> Vous devez choisir un nombre supérieur à 0 </p>
+					<div class='form'>
+						<label for='croissant'>Ordre des notes/rang <span class="infoCircle popupOpener" data-title="Notes/Rang" data-content="Choisissez croissant si la personne la plus avantagée a un score plus élevée (note) ou décroissant si elle a un score plus bas (rang)"></span> </label>
+
+						<span for='croissant'>croissant</span>
+						<div class="customRadio">
+							<input id='croissant' name='name' type='radio' name="radio" checked/>
+							<checkmark></checkmark>
+						</div>
+						<span for='decroissant'>décroissant</span>
+						<div class="customRadio">
+							<input id='decroissant' name='name' type='radio' name="radio"/>
+							<checkmark></checkmark>
+						</div>
+
+					</div>
+					<div class='form'>
+						<button> Ajouter</button>
+					</div>
+				</form>
+			</div>
+		</div>
+###

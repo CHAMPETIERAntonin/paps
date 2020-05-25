@@ -1,0 +1,81 @@
+
+
+.pieChart
+{
+	height: calc(var(--size, 150) * 1px);
+	overflow:hidden;
+	position:relative;
+	background-color: blue;
+	width: calc(var(--size, 150) * 1px);
+	border-radius:50%;
+
+}
+
+
+
+.pieChartElement
+{
+	background-color: rgba(var(--color, black), var(--more180,0));
+	--background-color: rgba(255, 248, 220,0.5);
+	height: 100%;
+	--min: calc(var(--more180, 0) * -100%);
+	--max: calc( (1 + var(--more180, 0)) * 100%);
+	clip-path: polygon(var(--min) var(--min), var(--max) var(--min), var(--max) var(--max), var(--min) var(--max));
+	position:absolute;
+	transform: translate(50%, 0) rotate(calc(var(--startAngle,0) * 1deg));
+	transform-origin: 0 50%;
+	width: 100%;
+}
+
+.pieChartElement:hover
+{
+	background-color: rgba(205, 198, 170, var(--more180,0));
+}
+
+.pieChartElement:hover:before
+{
+	background-color: rgb(205, 198, 170)
+}
+
+.pieChartElement:before
+{
+	background-color: rgb(var(--color, black));
+	--background-color: rgba(var(--color, black),0.5);
+	content:"";
+	height:100%;
+	width:100%;
+	position:absolute;
+	transform: translate(-100%, 0%) rotate(calc(var(--angle,0) * 1deg));
+	transform-origin: 100% 50%;
+}	
+
+.chartInfo 
+{
+  visibility: hidden;
+  width: 160px;
+  height: 15px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  pointer-events:none;
+  --margin-left: -80px;
+}
+
+/*arrow*/
+.chartInfo:after 
+{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}

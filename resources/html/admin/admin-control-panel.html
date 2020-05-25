@@ -1,0 +1,71 @@
+### Title = "Panneau de contrôle" ###
+### Scripts = "js/Utils.js" "js/admin/control-panel.js" ###
+### Css = "css/input.css" "css/resultStyles.css" "css/panel-styles.css" ###
+
+### Content =
+<div class="content">
+	<h2> <strong> Panneau de contrôle : </strong> </h2>
+	<hr /> <br />
+
+	<div class="centerContainer">
+		<h3>Résultats :</h3>
+	</div>
+	<p style="margin:10px 0 10px 0;">Vous pouvez ici voir tous les résultats que vous avez calculés, et sélectionner celui que les utilisateurs verront (ou n'en sélectionner aucun)</p>
+	<!-- <div id="waiting-frame" class="result-frame visible">
+		<div id="waiting" class="result-frame-frame">
+			<div class="result-frame-picture"> </div>
+			<div class="result-frame-text">
+				<p> Cliquer sur un bouton n'aura pas d'effet irréversible ! </p>
+			</div>
+		</div>
+	</div>
+
+	<div id="warning-frame" class="result-frame invisible">
+		<div id="warning" class="result-frame-frame">
+			<div class="result-frame-picture"> </div>
+			<div class="result-frame-text">
+				<p> Attention ! Le processus entraînera des conséquences irréversibles ! Cliquer sur "Confirmer" si
+					vous êtes sûr de vous ! </p>
+			</div>
+		</div>
+	</div>
+
+	<div id="done-frame" class="result-frame invisible">
+		<div id="done" class="result-frame-frame">
+			<div class="result-frame-picture"> </div>
+			<div class="result-frame-text">
+				<p> Processus terminé ! Vous pouvez choisir une autre option ou quitter la page ! </p>
+			</div>
+		</div>
+	</div> -->
+
+	<div class="vertical-list-container" id="resultList" onscroll="event.cancelBubble=true;">
+		<div class="vertical-list-item">
+			<span style="width: 25%;"></span>
+			<p style="width:25%"> Date </p>
+			<p style="width:18%;text-align:right"> Lien </p>
+			<span style="width:35%"></span>
+		</div>
+	</div>
+
+
+	<div class="controls-container">
+		<div class="subpanel-container centerContainer">
+			<button id="allow-users" class="panel-button" style="width:243px"> Autoriser l'accès des utilisateurs </button> <span
+				class="infoCircle popupOpener" data-title="Notes/Rang"
+				data-content="Ouvrir l'accès aux utilisateurs leur permettra de se connecter avec leur ID, trouvable sur la page de modification. Attention, cela fermera définitivement la possibilité de changer les paramètres globaux de la liste."></span>
+		</div>
+		<div class="subpanel-container centerContainer">
+			<div id="calc-results" class="panel-button" style="width:243px; text-align: center;"> Calcul des résultats </div> <span
+				class="infoCircle popupOpener" data-title="Notes/Rang"
+				data-content="Je suis pas sûr de ce qu'il faut dire ici..."></span>
+		</div>
+	</div>
+	<div class="controls-container">
+		<div class="subpanel-container confirmation-container"> </div>
+	</div>
+	<div class="centerContainer">
+		<a class='button-framed' href='/admin/panel'> Retour à la page d'attribution </a>
+	</div>
+</div>
+###

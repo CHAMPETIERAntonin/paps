@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8'
+					name='viewport'
+					content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+		<title>PAPS</title>
+		<link rel='stylesheet' href='css/basic-style.css'/>
+		<link rel='stylesheet' href='css/login-styles.css'/>
+		<link rel='stylesheet' href='css/lists-styles.css'/>
+	</head>
+	<body>
+		<div class='upperbar'> </div> 
+		<div class='upperbar toolbar'>
+			<a class='clickable-image' href='/'> </a>
+			<div class='logo-container'>
+				<img src='images/AMU-logo.png' height=45px/>
+				<img src='images/ECM-logo.png' height=45px/>
+			</div>
+			<h1 class='title'>  <strong>P</strong><span style='color:white'>rojet</span> <strong>P</strong><span style='color:white'>APS</span> </h1>
+			<a id='first-button' class='button-framed' href='/user'> Utilisateur </a>
+			<div class='dropdown'> <a class='button-framed' href='#'> &#9662; Administrateur </a>
+				<ul class='menu'>
+					<li> <a class='button' href='/signup'> Inscription </a> </li>
+					<li> <a class='button' href='/login'> Connexion </a> </li>
+				</ul>
+			</div>
+		</div>
+		<div class='contents-container'>
+			<div class='content'>
+				<h2> <strong>Modification de la liste ##listname## :</strong> </h2> <hr/> <br/>
+			</div>
+			<div class='all-options'>
+				<div class='option-container'>
+					<h3> Utilisateurs : </h3> <br/>
+					<button id='userListButton'> Liste des utilisateurs </button>
+					<button id="addUserButton"> Ajouter un utilisateur </button>
+					<button id="addUserListButton"> Ajouter une liste d'utilisateur </button>
+				</div>
+				<div class='option-container'>
+					<h3> Choix & Options : </h3> <br/>
+					<button id="choiceListButton"> Liste des options et des choix </button>
+					<button id="addChoiceButton"> Ajouter un choix </button>
+					<button id="choiceListButton"> Ajouter une liste de choix </button>
+				</div>
+			</div>
+		</div>
+
+	 
+		<div class='footer'>
+			<a class='button' href='/'> Accueil </a>
+			<div class='footer-separator'> | </div>
+			<a class='button' href='/info'> À propos </a>
+			<div class='footer-separator'> | </div>
+			<a class='button' href='/contact'> Nous contacter </a>
+			<div class='footer-separator'> | </div>
+			<a class='button' href='/licence'> Conditions d'utilisation </a>
+			<div class='footer-separator'> | </div>
+			<a class='button' href='/thanks'> Remerciements </a>
+		</div>
+		
+		
+		<div class='sail returnButton invisible' id="sail"> <!-- C'est l'élément qui va gérer l'assombrissement de toute la page -->
+		
+			<div class='pop-up invisible' id='userList' style="height:80%; width:65%; padding:10px;" onclick="event.cancelBubble=true;">
+				<h3> Liste des utilisateurs :</h3>
+				<div class="vertical-list-container" style="height:75%; width:85%;">
+					<div class="vertical-list-item"  style="margin-bottom: 8px";>
+						<p style="width:19%">NOM</p>
+						<p style="width:19%">Prénom</p>
+						<p style="width:6%">Rang</p>
+						<p style="width:56%">Identifiant</p>
+					</div>
+				</div>
+				<div style="display:flex; width:100%;">
+					<div style="width:calc(50%); text-align: right">
+						<button class="returnButton"> Retour </button>
+					</div>
+					<div style="width:calc(50%);">
+						<button> Télécharger </button>
+					</div>
+				</div>
+			</div> 
+			
+			<div class='pop-up invisible' id="addUser" style="height:80%; width:65%; padding:10px;" onclick="event.cancelBubble=true;">
+				<h3> Ajouter un utilisateur :</h3>
+				<form action='' method='get'  class='form-container'> 
+					<div class = "form">
+						<label for='first-name'> Prénom </label>
+						<input id='first-name' name='first-name' type='text' placeholder="..."/>
+					</div>
+					<div class = "form">
+						<label for='last-name'> Nom de Famille </label>
+						<input id='last-name' name='last-name' type='text' placeholder="..."/>
+					</div>
+					<div class = "form">
+						<label for='mark'> Note/Rang </label>
+						<input id='mark' name='mark' type='number' placeholder="1"/>
+					</div>
+					<button class="returnButton"> Retour </button>
+				</form>
+			</div> 
+			
+			<div class='pop-up invisible' id="addUserList" onclick="event.cancelBubble=true;">
+				<h3> Ajouter une liste d'utilisateur</h3>
+				<form action='' method='get'>
+					<label for='file'> Déposer le fichier .csv </label>
+					<input id='file' name='file' type='file'/>
+					<button class="returnButton"> Retour </button>
+				</form>
+			</div> 
+			
+			<div class='pop-up invisible' id="choiceList" onclick="event.cancelBubble=true;">
+				<h3> Liste des options & des choix :</h3>
+				<button class="returnButton"> Retour </button>
+			</div> 
+			
+			<div class='pop-up invisible' id="addChoice" onclick="event.cancelBubble=true;">
+				<h3> Ajouter un choix </h3>
+				<form action='' method='get'>
+					<label for='choice-name'> Nom du choix : </label>
+					<input id='choice-name' name='choice-name' type='text'/>
+					
+					<label for='option1'> Option n°1 :</label> 
+					<input id='option1' name='option1' type='text'/>
+					<label for='option2'> Option n°2 :</label> 
+					<input id='option2' name='option2' type='text'/>
+					<label for='option3'> Option n°3 :</label> 
+					<input id='option3' name='option3' type='text'/>
+					<label for='option4'> Option n°4 :</label> 
+					<input id='option4' name='option4' type='text'/>
+					<label for='option5'> Option n°5 :</label> 
+					<input id='option5' name='option5' type='text'/>
+					<label for='option6'> Option n°6 :</label> 
+					<input id='option6' name='option6' type='text'/>
+
+
+					<button class="returnButton"> Retour </button>
+				</form>
+			</div> 
+			
+			<div class='pop-up invisible' id="addChoiceList" onclick="event.cancelBubble=true;">
+				<h3> Ajouter une liste de choix </h3>
+				<form action='' method='get'>
+					<label for='file'> Déposer le fichier .csv </label>
+					<input id='file' name='file' type='file'/>
+					<button class="returnButton"> Retour </button>
+				</form>
+			</div>
+		</div>
+		<script src='js/popup-manager.js'></script>
+		<script src='js/AdminEdit.js'></script>
+			
+	</body>	
+</html>

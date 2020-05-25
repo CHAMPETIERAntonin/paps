@@ -1,0 +1,33 @@
+### Title = "Projet PAPS" ###
+### css = "css/charts-styles.css" "css/UNCSSS.css"  "css/   espace" ###
+### Scripts = "js/Utils.js" "js/UnAutreScript" "js/  espace" ###
+
+
+### Content =
+<div class='content'>
+	<h2>
+		<header> <strong> Bienvenue sur le site internet du Projet PAPS ! </strong> </header>
+	</h2>
+	<hr /> <br />
+	<h3> À quoi ça sert ? </h3>
+	<p>
+		<header> Le site propose un service gratuit de système d'affiliation. </header> Si vous avez à choisir
+		un nombre
+		précis d'individus dans un groupe plus large, nous vous offrons la solution !
+	</p>
+	<p>Vous allez pouvoir créer votre propre "file d'attente" avec des critères que vous aurez choisit, notre
+		objectif
+		a été de créer une procédure simple et intuitive pour cela. </p>
+	<p>Pour commencer à créer ou gérer votre file, il suffit d'aller dans l'onglet "Administrateur" en haut à
+		droite
+		et fournir les informations demandés. Si vous souhaitez vous inscrire dans une
+		file d'attente, il suffit d'aller dans l'onglet "Utilisateur" et entrer l'identifiant que vous aura
+		fourni
+		l'administrateur de votre file. </p>
+	<p> <strong> Bon séjour parmi nous ! </strong> </p> <br />
+	<h3> Besoin d'aide ? </h3>
+	<p> Vous trouverez plein d'informations dans la barre d'outils en bas des pages du site, si vous avez
+		toujours des
+		questions, n'hésitez pas à nous contacter ! </p>
+</div>
+###

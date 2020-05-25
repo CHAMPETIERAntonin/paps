@@ -1,0 +1,272 @@
+.choice-results
+{
+	margin-top: 15px;
+	background-color: var(--content-background-color);
+	width:95%;
+	height: 490px;
+	border-radius: 5px;
+	overflow-x: hidden;
+	overflow-y: none;
+}
+.choicesContainer
+{
+	flex-direction: row;
+	width: min-content;
+	height: 100%;
+	display: flex;
+	transition: left .2s;
+	position: relative;
+	overflow-y: none;
+	left:0;
+}
+.result-container
+{
+	margin: 5px 0 5px 0;
+	display: flex;
+	padding: 0 5px 0 5px;
+	flex-direction: column;
+	overflow-y: auto;
+}
+
+.result-list {
+	display: flex;
+	background-color: var(--subcontent-element-color);
+	margin-bottom:5px;
+	width: 100%;
+	border-radius: 5px;
+}
+
+.result-list > span:first-of-type{
+	margin-right: auto;
+}
+
+.result-list > span {
+	padding: 3px 40px 3px 5px;
+}
+
+
+.choice-selector {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	
+	width: auto;
+	overflow-x: auto;
+	height: 60px;
+	
+	background-color: var(--subcontent-background-color);
+	border-radius: 15px;
+	margin-bottom: 10px;
+}
+
+.choice-button {
+	background-color: var(--content-background-color);
+	border: 1px solid var(--special-color);
+	height: 30px;
+	padding: 5px;
+	margin: 5px 10px 5px 10px;
+	border-radius: 5px;
+	
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+
+	user-select: none;
+}
+
+.choice-button:hover {
+	background-color: var(--special-color);
+	color: white;
+	cursor: pointer;
+}
+
+
+.choice-results-title {
+	display:flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 600Px;
+	
+	background-color: var(--subcontent-background-color);
+	border-radius: 10px;
+}
+
+
+.choice-results-title >strong:first-of-type {
+	margin-top: 3px;
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.result-list-item {
+	display: flex;
+	background-color: var(--subcontent-element-color);
+	margin:2px;
+	width: 95%;
+	border-radius: 5px;
+	}
+
+.result-list-item > span:first-of-type{
+	margin-right: auto;
+	border-right: 1px solid #EFEFEF;
+
+}
+
+.result-list-item > span {
+	padding: 3px 65px 3px 5px;
+	
+}
+
+.selected {
+	background-color: var(--special-color);
+	color : white;
+}
+
+/*
+
+.choice-results {
+	margin-top: 15px;
+	background-color: var(--content-background-color);
+	width:95%;
+	height: 490px;
+	border-radius: 5px;
+	
+	position: relative;
+	
+	overflow-x: hidden;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	
+	padding-right: auto;
+}
+
+.result-list {
+	display: flex;
+	background-color: var(--subcontent-element-color);
+	margin:2px;
+	width: 99%;
+	border-radius: 5px;
+}
+
+.result-list > span:first-of-type{
+	margin-right: auto;
+}
+
+.result-list > span {
+	padding: 3px 40px 3px 5px;
+}
+
+.result-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	
+	position: absolute;
+	left: 860px;
+} */
+
+.result-frame {
+	width:100%;
+	height: 400px;
+	
+	background-color: var(--subcontent-background-color);
+	border-radius: 30px;
+}
+
+.result-frame-frame {
+	width: 98%;
+	height: 98%;
+	margin: 1% 1% 1% 1%;
+	border: 10px solid var(--text-color);
+	border-radius: 30px;
+	
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	
+}
+
+
+
+.result-frame-frame > div {
+	width: 48%;
+	height: 100%;
+	margin: 0 1% 0 1%;
+}
+
+#not-over > .result-frame-picture {
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#not-over > .result-frame-picture:after {
+	content:" \231B";
+	font-size: 150px;
+	color: var(--text-color);
+}
+
+#not-over > .result-frame-text {
+	font-size: 25px;
+	font-weight: bold;
+	
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#success > .result-frame-picture {
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#success > .result-frame-picture:after {
+	content:" \2713";
+	font-size: 150px;
+	color:green;
+}
+
+#success > .result-frame-text {
+	font-size: 25px;
+	font-weight: bold;
+	
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#success {
+	border-color: green;
+}
+
+#failure > .result-frame-picture {
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#failure > .result-frame-picture:after {
+	content:" \00274C";
+	font-size: 150px;
+	color:red;
+}
+
+#failure > .result-frame-text {
+	font-size: 25px;
+	font-weight: bold;
+	
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#failure {
+	border-color: red;
+}

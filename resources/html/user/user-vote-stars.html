@@ -1,0 +1,40 @@
+### Title = "Projet PAPS" ###
+### Scripts = "js/Utils.js" "js/user/Panel.js" ###
+
+### Content =
+		<div class='content'>
+			<h2> <strong> Placez vos étoiles :</strong> </h2>
+			<hr /> <br />
+			<h3 id="starsContainer"> Vous avez  étoiles au total : </h3>
+			<p> Repartissez vos étoiles parmi tous les choix possibles, plus vous mettrez des étoiles dans un choix,
+				plus vous aurez de chances de l'avoir. Attention cependant,
+				si vous mettez toutes vos étoiles dans un choix et que vous ne l'obtenez pas, vous aurez aléatoirement
+				un des autres choix, faites donc des choix judicieux ! </p>
+			<p> <em> Pensez bien à attribuer toutes vos étoiles. </em> </p> <br />
+			<hr /> <br />
+			<h3> Il vous reste <span id="pointsLeftDiv">5</span> étoiles à placer </h3>
+			<div class="centerContainer">
+				<form class="searchBox" id="searchBox">
+					<input type="text" placeholder="Rechercher..." size="17" style="position:relative; right: 30px;"/>
+					<button class="centerContainerH" type="submit" style="position:relative; right:30px;"">
+						<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+							<path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+							</path>
+						</svg>
+					</button>
+				</form>
+				<div style="overflow-y: scroll; max-height: 500px; min-height: 400px;  width: 100%; display: flex; flex-direction: row; justify-content: center; padding: 10px; align-items: baseline; background-color:var(--content-background-color); overscroll-behavior:none">
+					<div class='form-container' style="width:50%;margin-bottom: 30px;" id="choiceContainer">
+
+					</div>
+				</div>
+				<p style="align-self:start"><strong> La validation n'est pas permanente, vous pourrez toujours venir modifier vos choix avant les résultats
+						!</strong></p>
+				<button id="submit">Valider</button> 
+			</div>
+			<br /> <hr /> <br />
+			<div class="centerContainer">
+				<a style="font-size: 30px;" class="button-framed" id="resultsButton">Résultats</a>
+			</div>
+		</div>
+###

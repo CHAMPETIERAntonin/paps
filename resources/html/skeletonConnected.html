@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='UTF-8' name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+	<title> ### Replace : Title ### </title>
+	<link rel='stylesheet' href='css/basic-style.css' />
+	<link rel='stylesheet' href='css/login-styles.css' />
+	<link rel='stylesheet' href='css/lists-styles.css' />
+### Replace : css ###
+
+</head>
+
+<body>
+	<div id="dummy-upperbar" class='upperbar'> </div>
+
+	<div class='upperbar toolbar'>
+		<!-- Toolbar for authentified users -->
+		<a class='clickable-image' href='/'> </a>
+		<div class='logo-container'>
+			<img src='images/toolbar/AMU-logo2.png' height="45px" />
+			<img src='images/toolbar/ECM-logo2.png' height="45px" />
+		</div>
+		<h1 class='title'> <strong>P</strong><span class='website-title'>rojet</span> <strong>P</strong><span
+				class='website-title'>APS</span> </h1>
+				<div class=mobile-container>
+					<div class='mobile-container-toolbar'>
+						<img class="mobile-toolbar-menu" src='images/toolbar/mobile-menu-ver11.png' height=" 45px"/>
+						<h1> Menu </h1>
+						<img class="mobile-toolbar-exit" src='images/toolbar/arrow-ver3.png' height="30px"/>
+					</div>
+					<div  class='connected-info'>
+						<a class="redirect-user" href="/admin/panel">
+						<div class='profile-picture'> <img src="images/toolbar/profile-picture-ver5.png" height="25px"
+																							 width="25px" /> </div>
+			
+						<div class='user-info'>
+								<p> <strong> ##username## </strong> </p>
+								<p> ##role## </p>
+						</div> </a>
+					</div>
+					<div id="mobile-disconnect" class="mobile-button-container">
+						<img src="images/toolbar/disconnect-ver4.png" class="mobile-thing" height="30px"/>
+						<a id='disconnect-button' class='button-framed' href='/logout' style="margin-right: 10px;"> Déconnexion </a>
+					</div>
+				</div>
+		<img class="popupOpener linker" id="parameter-icon" data-name='theme' src="svg/engrennage.svg" style="margin-right: 10px;"/>
+		<img class="mobile-menu" src='images/toolbar/mobile-menu-ver11.png' height="45px"/>
+	</div>
+
+	<div class='contents-container'>
+### Replace : content ###		
+	</div>
+
+
+
+	<div class='footer'>
+		<div class="footer-container">
+			<a class="footer-image" href="/"> <img src="images/footer/home-ver4.png" height="25px"/> </a>
+			<a class='button' href='/'> Accueil </a>
+		</div>
+		<div class='footer-separator'> | </div>
+		<div class="footer-container">
+			<a class="footer-image" href="/info"> <img src="images/footer/about-ver4.png" height="25px"/> </a>
+			<a class='button' href='/info'> À propos </a>
+		</div>
+		<div class='footer-separator'> | </div>
+		<div class="footer-container">
+			<a class="footer-image" href="/contact"> <img src="images/footer/contact-ver3.png" height="25px"/> </a>
+			<a class='button' href='/contact'> Nous contacter </a>
+		</div>
+		<div class='footer-separator'> | </div>
+		<div class="footer-container">
+			<a class="footer-image" href="/licence"> <img src="images/footer/licence-ver3.png" height="25px"/> </a>
+			<a class='button' href='/licence'> Conditions d'utilisation </a>	
+		</div>		
+		<div class='footer-separator'> | </div>
+		<div class="footer-container">
+			<a id="last-image" class="footer-image" href="/thanks"> <img src="images/footer/thanks-ver5.png" height="35px" style="padding-left: -5px;"/> </a>
+			<a id="last-button" class='button' href='/thanks'> Remerciements </a>			
+		</div>
+	</div>
+
+
+	<script src='js/popup-manager.js'> </script>
+	<script src='js/other/theme-changer.js'> </script>
+	<script src="js/other/mobile-menu.js"> </script>
+### Replace : scripts ###
+
+</body>
+
+</html>

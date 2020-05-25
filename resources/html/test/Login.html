@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Login </title>
+		<meta charset='UTF-8'/>
+	</head>
+	<body>
+	
+		<form method="post" action="/login">
+			<div>
+				<label for="email">Email : </label>
+				<input name="email" type="text" id="email", value="">
+			</div>		
+			<div>
+				<label for="_password">Password : </label>
+				<input name="_password" type="password" id="_password", value="">
+			</div>
+			<div>
+				<button>login</button>
+			</div>
+		</form>
+		
+		<form method="post" action="/createaccount">
+			<div>
+				<label for="username">Username : </label>
+				<input name="username" type="text" id="username", value="">
+			</div>	
+			<div>
+				<label for="email">Email : </label>
+				<input name="email" type="text" id="email", value="">
+			</div>		
+			<div>
+				<label for="_password">Password : </label>
+				<input name="_password" type="password" id="_password", value="">
+			</div>
+			<div>
+				<button>createaccount</button>
+			</div>
+		</form>
+		<form method="post" action="/uploadTest">
+			<div>
+				<label for="list">Select a file : </label>
+				<input name="list" type="file" id="file", value="">
+			</div>	
+			<div>
+				<button>Upload</button>
+			</div>
+		</form>
+		<a href='/main' target="_self">main
+		<a href='/logout' target="_self">Logout
+	</body>
+</html>	
