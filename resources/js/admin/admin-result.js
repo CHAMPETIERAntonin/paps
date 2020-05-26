@@ -108,6 +108,8 @@ function createElement(choiceName, users, index)
 
 function populate()
 {
+
+	document.getElementById("buttonReturn").setAttribute("href", "/admin/vote/" + voteIndex);
 	sendJsonRequest("/admin/vote/" + voteIndex + "/getResults/" + resultIndex, "GET", null, function(status, res)
 	{
 		if(res.correct)
