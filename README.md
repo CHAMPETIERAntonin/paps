@@ -1,5 +1,5 @@
 # PAPS
-Projet PAPS, pour la première année de license MPCI
+Projet PAPS, pour la première année de licence MPCI
 
 ### Consignes d’utilisation :
 
