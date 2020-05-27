@@ -1,7 +1,7 @@
 # PAPS
 Projet PAPS, pour la première année de license MPCI
 
-### Consignes d’utilisations :
+### Consignes d’utilisation :
 
 - Installer et décompresser l’archive dans le dossier de votre choix.
 
