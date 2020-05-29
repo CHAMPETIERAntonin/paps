@@ -73,6 +73,10 @@ class Vote extends Utils.Saveable {
         return this.results[index];
     }
     deleteResult(index) {
+        if (index > this.activeResult)
+            this.activeResult--;
+        if (index == this.activeResult)
+            this.activeResult = null;
         this.results.splice(index, 1);
     }
     getResults() {

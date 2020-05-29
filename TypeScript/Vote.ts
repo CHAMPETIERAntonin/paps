@@ -115,8 +115,12 @@ class Vote extends Utils.Saveable
 
 	public deleteResult(index:number):void
 	{
-		this.results.splice(index, 1);
+		if(index > this.activeResult)
+			this.activeResult--;
+		if(index == this.activeResult)
+			this.activeResult = null;
 
+		this.results.splice(index, 1);
 	}
 
 	public getResults():ResultObj[]
